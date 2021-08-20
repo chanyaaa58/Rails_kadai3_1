@@ -29,6 +29,9 @@ class PicturesController < ApplicationController
     @picture.destroy
     redirect_to pictures_path, notice:"投稿を削除しました！"
   end
+  def confirm
+    @picture = Picture.new(picture_params)
+  end
   private
   def picture_params
     params.require(:picture).permit(:title, :content)
