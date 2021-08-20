@@ -1,0 +1,15 @@
+current directory: /Users/ayatakahashi/workspace/fb_app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.7/ext/bootsnap
+/Users/ayatakahashi/.rbenv/versions/2.7.4/bin/ruby -I /Users/ayatakahashi/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20210820-3695-10s6lfa.rb extconf.rb
+creating Makefile
+
+current directory: /Users/ayatakahashi/workspace/fb_app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.7/ext/bootsnap
+make "DESTDIR=" clean
+
+current directory: /Users/ayatakahashi/workspace/fb_app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.7/ext/bootsnap
+make "DESTDIR="
+compiling bootsnap.c
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/ayatakahashi/workspace/fb_app/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.7.7/ext/bootsnap
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 bootsnap.bundle ./.gem.20210820-3695-13bpza2/bootsnap
