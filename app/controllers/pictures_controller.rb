@@ -4,4 +4,7 @@ class PicturesController < ApplicationController
   def new
     @picture = Picture.new
   end
+  def create
+    Picture.create(title: params[:picture][:title], content: params[:picture][:content])
+  end
 end
