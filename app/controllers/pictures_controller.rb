@@ -4,7 +4,11 @@ class PicturesController < ApplicationController
     @pictures = Picture.all
   end
   def new
-    @picture = Picture.new
+    if params[:back]
+      @picture = Picture.new(picture_params)
+    else
+      @picture = Picture.new
+    end
   end
   def create
     @picture = current_user.pictures.build(picture_params)
@@ -39,7 +43,7 @@ class PicturesController < ApplicationController
   end
   private
   def picture_params
-    params.require(:picture).permit(:title, :content)
+    params.require(:picture).permit(:title, :content, :image, :image_cache)
   end
   def set_picture
     @picture = Picture.find(params[:id])
