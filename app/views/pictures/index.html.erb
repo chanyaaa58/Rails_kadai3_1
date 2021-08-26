@@ -1,0 +1,37 @@
+<header>
+  <div class="header-logo">
+    <a href="/home/top">FbApp</a>
+  </div>
+  <ul class="header-menus">
+    <li>
+      <a href="/pictures">FbAppとは</a>
+    </li>
+  </ul>
+</header>
+<div class="about-main">
+  <h2>FbAppとは</h2>
+  <p>
+    SNSサービスです。
+    切り取って残したい思い出とことばを投稿し、世界中の人と楽しくコミュニケーションできます。
+  </p>
+</div>
+<h1>投稿一覧</h1>
+<p><%= notice %></p>
+<table>
+  <tr>
+    <th>投稿者</th>
+    <th>Title</th>
+    <th>Content</th>
+  </tr>
+<% @pictures.each do |picture| %>
+  <tr>
+    <td><%= picture.user.name %></td>
+    <td><%= picture.title %></td>
+    <td><%= picture.content %></td>
+    <td><%= link_to '詳細を確認する', picture_path(picture.id) %></td>
+    <td><%= link_to "投稿を編集する", edit_picture_path(picture.id), data: { confirm: '本当に編集してよいですか？' } %></td>
+    <td><%= link_to '投稿を削除する', picture_path(picture.id), method: :delete ,data: { confirm: '本当に削除してよいですか？' } %></td>
+  </tr>
+<% end %>
+</table>
+<%= link_to '新規投稿する', new_picture_path %>

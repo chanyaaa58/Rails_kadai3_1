@@ -1,0 +1,7 @@
+<h1>詳細画面</h1>
+<p id="notice"><%= notice %></p>
+<p>Title: <%= @picture.title %></p>
+<p>Content: <%= @picture.content %></p>
+<p>Image: <%= image_tag @picture.image.url %>
+<%= link_to '編集する', edit_picture_path(@picture) %> |
+<%= link_to '戻る', pictures_path %>
